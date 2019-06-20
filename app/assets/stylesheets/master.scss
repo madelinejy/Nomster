@@ -33,3 +33,11 @@ body {
 	font-family: 'chunkfiveroman', sans-serif;
 	font-size: 26px;
 }
+
+.pagination {
+  .previous_page { background: grey; color: white }
+  .previous_page.disabled { background: white; color: black }
+  .current { background: grey; color: #E80E2D }
+  .next_page { background: grey; color: white }
+  .next_page.disabled { background: black; color: grey }
+}
