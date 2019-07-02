@@ -40,9 +40,9 @@ gem 'will_paginate-bootstrap'
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false
 
-gem 'geocoder'
+gem "geocoder"
 
-gem 'figaro'
+gem "figaro"
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
