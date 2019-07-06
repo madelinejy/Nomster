@@ -37,7 +37,32 @@
   	  <%= link_to 'Destroy', place_path(@place), method: :delete, data: {confirm: 'Are you sure you want to delete this?'},class: 'btn btn-danger' %>
   	<% end %>
   </div>
+
+<div>
+  <p>Photos</p>
+  <% @place.photos.each do |photo| %>
+    <div class="col-12 col-sm-6">
+      <blockquote>
+        <%= photo.caption %>
+      </blockquote>
+    </div>
+  <% end %>
 </div>
+
+<hr>
+
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+  <p>Add New Photo</p>
+  <div>
+    <%= f.input :caption %>
+  </div>
+  <div>
+    <%= f.submit "Add a Photo", class: 'btn btn-primary' %>
+  </div>
+<% end %>
+
+</div>
+
 <!-- Modal -->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
